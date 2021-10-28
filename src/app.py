@@ -5,3 +5,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return "Valle Grande!"
+
+@app.route('/sum/<int:a>/<int:b>')
+def sum(a: int, b: int):
+    nums_sum = a + b
+    return f"La suma es: {str(nums_sum)}"
